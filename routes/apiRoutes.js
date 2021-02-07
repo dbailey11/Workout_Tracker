@@ -16,18 +16,13 @@ module.exports = function (app) {
 
   //post new workout
   app.post("/api/workouts/", async (req, res) => {
-    try {
-        const response = await db.Workout.create({type: "workout"})
-        console.log("hello", response);
-        res.json(response);
-    }
-    catch(err) {
+    
+    db.Workout.create(req.body).then((dbWorkout) => {
+        res.json(dbWorkout);
+    })
+    .catch(err => {
         res.status(400).json(err);
-      }
-    // Workout.create(body)
-    //   .then((dbWorkout) => {
-    //     res.json(dbWorkout);
-    //   })
+    });
       
   });
 

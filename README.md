@@ -30,3 +30,14 @@ Be sure to use the following guides for support:
 not really sure where to begin....
 - I understand I need to build the mongodb.... do I start with that?
 - set up a routes directory
+
+
+where does the name come from?
+//------------CREATING COLLECTION--------------
+db.Library.create({ name: "Campus Library" })
+  .then(dbLibrary => {
+    console.log(dbLibrary);
+  })
+  .catch(({message}) => {
+    console.log(message);
+  });

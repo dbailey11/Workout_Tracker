@@ -1,3 +1,5 @@
+//creates blueprint/template for database
+
 const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
@@ -41,6 +43,13 @@ const WorkoutSchema = new Schema({
     ],
   });
   
+  WorkoutSchema.virtual("totalDuration").get(function() {
+    let totalDuration = 0;
+    this.exercises.forEach(exercise => {
+      totalDuration += exercise.duration;
+    });
+    return totalDuration;
+  });
  
   const Workout = mongoose.model("Workout", WorkoutSchema);
   

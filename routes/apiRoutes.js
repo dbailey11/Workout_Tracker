@@ -1,11 +1,24 @@
 const db = require("../models");
 
 module.exports = function (app) {
-  //finds last workout
+  //finds last workout for main page
   app.get("/api/workouts", (req, res) => {
     db.Workout.find({})
       .sort({ date: -1 })
       .then((dbWorkout) => {
+        // console.log("hi");
+        res.json(dbWorkout);
+      })
+      .catch((err) => {
+        res.json(err);
+      });
+  });
+
+  //get route for stats page
+  app.get("/api/workouts/range", (req, res) => {
+    db.Workout.find({})
+    .limit(7)  
+    .then((dbWorkout) => {
         console.log("hi");
         res.json(dbWorkout);
       })
@@ -15,7 +28,7 @@ module.exports = function (app) {
   });
 
   //post new workout
-  app.post("/api/workouts/", async (req, res) => {
+  app.post("/api/workouts/", (req, res) => {
     
     db.Workout.create(req.body).then((dbWorkout) => {
         res.json(dbWorkout);
@@ -40,17 +53,6 @@ module.exports = function (app) {
   });
 
 
-  //get route for stats
-  app.get("/api/workouts/range", (req, res) => {
-    db.Workout.find({})
-    .limit(7)  
-    .then((dbWorkout) => {
-        console.log("hi");
-        res.json(dbWorkout);
-      })
-      .catch((err) => {
-        res.json(err);
-      });
-  });
+  
 
 };

@@ -1,43 +1,53 @@
 # Workout_Tracker
 
-For this assignment, you'll create a workout tracker. You have already been provided with the front end code in the Develop folder. This assignment will require you to create Mongo database with a Mongoose schema and handle routes with Express.
+## Discription:
 
-## User Story
+Workout Tracker is a full stack application that uses mongoDB as the database to store a user's workouts and exercises. The application provides different types of functionality that will allow the user to track new exercises in an exsisting workout, add new workouts and exercises as well as view workout time durations and totalled weights of their workouts. The front end was provided as starter code and our task was to connect the front end to MongoDB in order to store user's workouts and access them later on.
 
-As a user, I want to be able to view create and track daily workouts. I want to be able to log multiple exercises in a workout on a given day. I should also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, I should be able to track my distance traveled.
+## Table of Contents
 
-## Acceptance Criteria
-When the user loads the page, they should be given the option to create a new workout or continue with their last workout.
-The user should be able to:
-- Add exercises to the most recent workout plan.
-- Add new exercises to a new workout plan.
-- View the combined weight of multiple exercises from the past seven workouts on the stats page.
-- View the total duration of each workout from the past seven workouts on the stats page.
+- [Usage](#usage)
+- [Installation](#installation)
+- [Screenshot](#screenshot)
+- [Skills](#skills)
+- [License](#license)
+- [Resources](#resources)
 
-* Important: Look into using a MongoDB aggregate function to dynamically add up and return the total duration for each workout. Check out the MongoDB documentation on the $addFields, the MongoDB documentation on the $sum operator, and the Mongoose documentation on aggregate functions to learn how it can be accomplished.
+## Usage
 
-To deploy an application with a MongoDB database to Heroku, you'll need to set up a MongoDB Atlas account and connect a database from there to your application. 
-Be sure to use the following guides for support:
-- Set Up MongoDB Atlas
-- Deploy with Heroku and MongoDB Atlas
+Usage of this app is for any person interested in tracking their workouts to help them stay motivated to reach their fitness goals. 
 
+## Installation
 
-=======NOTES===============
-- ran "npm i"
-- ???*** was not able to run "npm run seeds" ***???
-- linked the exercise.html page to index.html - should I be changing the html a tags?
+Users may access the application via the site below:
 
-not really sure where to begin....
-- I understand I need to build the mongodb.... do I start with that?
-- set up a routes directory
+Users or other programmers can download the repo to their own machine. Be sure to run "npm i" to pull down required packages. MongoDB will also need to be installed if not already. 
 
+## Screenshot
 
-where does the name come from?
-//------------CREATING COLLECTION--------------
-db.Library.create({ name: "Campus Library" })
-  .then(dbLibrary => {
-    console.log(dbLibrary);
-  })
-  .catch(({message}) => {
-    console.log(message);
-  });
+![Image of main landing page of application](img/index.png)
+![Image of adding an exercise page](img/exercise.png)
+![Image of stats page](img/stats.png)
+
+## Skills
+
+![badges](https://img.shields.io/badge/<SKILLS>-<JAVASCRIPT>-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a)
+
+![badges](https://img.shields.io/badge/<SKILLS>-<MongoDB>-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a)
+
+![badges](https://img.shields.io/badge/<SKILLS>-<Express>-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a)
+
+## License
+
+[![Generic badge](https://img.shields.io/badge/<SUBJECT>-<ACADEMIC>-<COLOR>.svg)](https://shields.io/)License Documentation: (https://opensource.org/licenses/AFL-3.0)
+
+## Resources
+* Week 17 class activities
+* Stack overflow
+* https://docs.mongodb.com/manual/
+* https://mongoosejs.com/docs/guide.html
+
+ ## Questions
+  * If you have any questions please feel free to email me or stop by on my GitHub! 
+  * Find me on GitHub: (https://github.com/dbailey11/)
+  * Email me: baileydevyn19@gmail.com

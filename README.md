@@ -20,6 +20,7 @@ Usage of this app is for any person interested in tracking their workouts to hel
 ## Installation
 
 Users may access the application via the site below:
+https://young-hollows-54459.herokuapp.com/?id=60299990c77f2f00155f926e
 
 Users or other programmers can download the repo to their own machine. Be sure to run "npm i" to pull down required packages. MongoDB will also need to be installed if not already. 
 
